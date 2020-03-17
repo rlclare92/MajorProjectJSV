@@ -1,0 +1,3 @@
+/Users/codenation/Major project/CSharp /obj/Debug/netcoreapp3.1/CSharp.csprojAssemblyReference.cache
+/Users/codenation/Major project/CSharp /obj/Debug/netcoreapp3.1/CSharp.AssemblyInfoInputs.cache
+/Users/codenation/Major project/CSharp /obj/Debug/netcoreapp3.1/CSharp.AssemblyInfo.cs

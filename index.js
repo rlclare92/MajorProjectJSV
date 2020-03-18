@@ -1,7 +1,7 @@
 let playerBalance = 20;
 
 let playerAgeInput=23;
-let ageRestriction = () => {
+let (ageRestriction) = () => {
     if (playerAgeInput => 18) {
         console.log("Welcome, please select a game from the options, 1 for Black Jack or 2 for Roulette");
         gameOptions(1)

@@ -94,21 +94,23 @@ namespace classes
             playerInput += userBalance;
             Console.WriteLine("Player wins {0}", playerInput);
             Console.WriteLine("PlayerWinnings updated balance {0}", userBalance);
+            playAgain();
         }
         public void HouseWinning()
         {
             playerInput -= userBalance;
             Console.WriteLine("House wins {0}", playerInput);
             Console.WriteLine("User balance is: {0}", userBalance);
+            playAgain();
         }
-        public void PlayAgain()
+        public void playAgain()
         {
-            Console.WriteLine("Play Agina?");
+            Console.WriteLine("Play Again?");
             if (input == "Yes")
             {
                 rouletteGameBeginning();
             }
-            else
+            else if (input == "No")
             {
                 CSharp.Program casinoGame = new CSharp.Program();
                 casinoGame.gameOptions();

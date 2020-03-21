@@ -28,10 +28,12 @@ namespace CSharp
             if (input == "BlackJack")
             {
                 classes.BlackJack blackJackGamePlay = new classes.BlackJack();
+                blackJackGamePlay.blackJackGame();
             }
             else if (input == "Roulette")
             {
                classes.Roulette rouletteGamePlay = new classes.Roulette();
+                rouletteGamePlay.rouletteGameBeginning();
             }
         }
         static void Main(string[] args)
@@ -39,11 +41,11 @@ namespace CSharp
             Program casinoGame = new Program();
             casinoGame.ageRestriction();
 
-            classes.BlackJack blackJackGamePlay = new classes.BlackJack();
-            blackJackGamePlay.blackJackGame();
+            // classes.BlackJack blackJackGamePlay = new classes.BlackJack();
+            // blackJackGamePlay.blackJackGame();
 
-            classes.Roulette rouletteGamePlay = new classes.Roulette();
-            rouletteGamePlay.rouletteGameBeginning();
+            // classes.Roulette rouletteGamePlay = new classes.Roulette();
+            // rouletteGamePlay.rouletteGameBeginning();
         }
     }
 }

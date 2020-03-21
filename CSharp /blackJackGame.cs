@@ -95,7 +95,7 @@ namespace classes
             Console.WriteLine("Dealer's total is: {0}", dealersTotalOfFirstDraw);
             if (dealersTotalOfFirstDraw == 21)
             {
-                Console.WriteLine("BlackJack!! Player Wins");
+                Console.WriteLine("BlackJack!! Dealer Wins");
                 PlayerWinnings();
             }
             else
@@ -122,6 +122,7 @@ namespace classes
             else if (dealersTotalOfFirstDraw == playersHandTotal)
             {
                 Console.WriteLine("Tie");
+                playAgain();
             }
         }
         public void ScoreCheckDealer(int dealersTotalOfFirstDraw)
@@ -147,6 +148,7 @@ namespace classes
             playerInput += userBalance;
             Console.WriteLine("Player wins {0}", playerInput);
             Console.WriteLine("PlayerWinnings updated balance {0}", userBalance);
+            playAgain();
         }
 
         public void dealersWinning()
@@ -154,15 +156,16 @@ namespace classes
             playerInput -= userBalance;
             Console.WriteLine("Dealer wins {0}", playerInput);
             Console.WriteLine("User balance is: {0}", userBalance);
+            playAgain();
         }
-        public void PlayAgain()
+        public void playAgain()
         {
-            Console.WriteLine("Play Agina?");
+            Console.WriteLine("Play Again? Yes or No");
             if (input == "Yes")
             {
                 blackJackGame();
             }
-            else
+            else if (input == "No")
             {
                 CSharp.Program casinoGame = new CSharp.Program();
                 casinoGame.gameOptions();

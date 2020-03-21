@@ -33,9 +33,9 @@ namespace classes
             playersTotal = playersFirstCard + playersSecondCard;
             Console.WriteLine("Your total is: {0}", playersTotal);
             PlayerChoices();
-        }    
+        }
         public void PlayerChoices()
-        {   
+        {
             Console.WriteLine("Hit or Stand?");
             input = Console.ReadLine();
             Random rnd = new Random();
@@ -54,15 +54,15 @@ namespace classes
                 playersHandTotal += playersTotal;
                 Console.WriteLine("You have stand at {0}, dealers turn", playersHandTotal);
                 if (playersTotal >= 22)
-            {
-                Console.WriteLine("Bust");
-                dealersWinning();
-            }
-            else if (playersTotal == 21)
-            {
-                Console.WriteLine("BlackJack!!");
-                PlayerWinnings();
-            }
+                {
+                    Console.WriteLine("Bust");
+                    dealersWinning();
+                }
+                else if (playersTotal == 21)
+                {
+                    Console.WriteLine("BlackJack!!");
+                    PlayerWinnings();
+                }
                 Console.Read();
                 dealersHand();
             }
@@ -103,7 +103,7 @@ namespace classes
                 dealersChoice(dealersTotalOfFirstDraw);
             }
         }
-        public void dealersChoice( int dealersTotalOfFirstDraw)
+        public void dealersChoice(int dealersTotalOfFirstDraw)
         {
             Random rnd = new Random();
             if (dealersTotalOfFirstDraw < playersHandTotal)
@@ -154,6 +154,19 @@ namespace classes
             playerInput -= userBalance;
             Console.WriteLine("Dealer wins {0}", playerInput);
             Console.WriteLine("User balance is: {0}", userBalance);
+        }
+        public void PlayAgain()
+        {
+            Console.WriteLine("Play Agina?");
+            if (input == "Yes")
+            {
+                blackJackGame();
+            }
+            else
+            {
+                CSharp.Program casinoGame = new CSharp.Program();
+                casinoGame.gameOptions();
+            }
         }
     }
 }

@@ -4,11 +4,9 @@ namespace classes
 {
     class Roulette
     {
-
         string input;
         int playerInput;
         int userBalance;
-
         public void rouletteGameBeginning()
         {
             Console.WriteLine("Please place your bets £");
@@ -39,7 +37,7 @@ namespace classes
             }
         }
         public void colourPlayThrough()
-        {   
+        {
             input = Console.ReadLine();
             Random rnd = new Random();
             string[] colours = { "Black", "Red" };
@@ -48,13 +46,14 @@ namespace classes
             if (input == colours[cIndex])
             {
                 Console.WriteLine("You win!!");
+                PlayerWinnings();
             }
             else
             {
                 Console.WriteLine("You lose!!");
+                HouseWinning();
             }
         }
-
         public void playerOddsThrough()
         {
             input = Console.ReadLine();
@@ -65,13 +64,14 @@ namespace classes
             if (input == odds[oIndex])
             {
                 Console.WriteLine("You win!!");
+                PlayerWinnings();
             }
             else
             {
                 Console.WriteLine("You lose");
+                HouseWinning();
             }
         }
-
         public void playerNumberThgrough()
         {
             input = Console.ReadLine();
@@ -81,10 +81,37 @@ namespace classes
             if (playerInput == numbers)
             {
                 Console.WriteLine("You win!!");
+                PlayerWinnings();
             }
             else
             {
                 Console.WriteLine("You lose");
+                HouseWinning();
+            }
+        }
+        public void PlayerWinnings()
+        {
+            playerInput += userBalance;
+            Console.WriteLine("Player wins {0}", playerInput);
+            Console.WriteLine("PlayerWinnings updated balance {0}", userBalance);
+        }
+        public void HouseWinning()
+        {
+            playerInput -= userBalance;
+            Console.WriteLine("House wins {0}", playerInput);
+            Console.WriteLine("User balance is: {0}", userBalance);
+        }
+        public void PlayAgain()
+        {
+            Console.WriteLine("Play Agina?");
+            if (input == "Yes")
+            {
+                rouletteGameBeginning();
+            }
+            else
+            {
+                CSharp.Program casinoGame = new CSharp.Program();
+                casinoGame.gameOptions();
             }
         }
     }

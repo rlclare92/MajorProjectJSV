@@ -14,7 +14,7 @@ namespace classes
             playerInput = Convert.ToInt32(input);
             Console.WriteLine("You have placed {0}, Dealer has placed {0}", playerInput);
 
-            Console.WriteLine("Please select what too bet on: Colours, Odds, Numnbers");
+            Console.WriteLine("Please select what too bet on: Colours, Odds, Numbers");
             input = Console.ReadLine();
             if (input == "Colours")
             {
@@ -106,6 +106,7 @@ namespace classes
         public void playAgain()
         {
             Console.WriteLine("Play Again?");
+            input = Console.ReadLine();
             if (input == "Yes")
             {
                 rouletteGameBeginning();
@@ -113,7 +114,7 @@ namespace classes
             else if (input == "No")
             {
                 CSharp.Program casinoGame = new CSharp.Program();
-                casinoGame.gameOptions();
+                // CcasinoGame.gameOptions();
             }
         }
     }

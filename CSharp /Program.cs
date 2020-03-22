@@ -14,7 +14,6 @@ namespace CSharp
             playerAgeInput = Convert.ToInt32(input);
             if (playerAgeInput >= 18)
             {
-                Console.WriteLine("Welcome, please select a game from the options, BlackJack or Roulette");
                 gameOptions();
             }
             else
@@ -24,6 +23,7 @@ namespace CSharp
         }
         public void gameOptions()
         {
+            Console.WriteLine("Welcome, please select a game from the options, BlackJack or Roulette");
             input = Console.ReadLine();
             if (input == "BlackJack")
             {

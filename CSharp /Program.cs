@@ -35,6 +35,9 @@ namespace CSharp
                classes.Roulette rouletteGamePlay = new classes.Roulette();
                 rouletteGamePlay.rouletteGameBeginning();
             }
+            else{
+                gameOptions();
+            }
         }
         static void Main(string[] args)
         {

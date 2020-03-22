@@ -105,7 +105,7 @@ namespace classes
         }
         public void playAgain()
         {
-            Console.WriteLine("Play Again?");
+            Console.WriteLine("Play Again? Yes or No");
             input = Console.ReadLine();
             if (input == "Yes")
             {
@@ -114,7 +114,7 @@ namespace classes
             else if (input == "No")
             {
                 CSharp.Program casinoGame = new CSharp.Program();
-                // CcasinoGame.gameOptions();
+                casinoGame.gameOptions();
             }
         }
     }

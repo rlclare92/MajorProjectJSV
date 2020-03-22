@@ -108,7 +108,8 @@ namespace classes
             Random rnd = new Random();
             if (dealersTotalOfFirstDraw < playersHandTotal)
             {
-                int dealersNextCard = rnd.Next(1, 12);
+                int dealersNextCard = 0;
+                dealersNextCard = rnd.Next(1, 12);
                 Console.WriteLine("Dealer's next card is {0}", dealersNextCard);
                 dealersTotalOfFirstDraw += dealersNextCard;
                 Console.WriteLine("Dealer's current total is: {0}", dealersTotalOfFirstDraw);
@@ -161,8 +162,11 @@ namespace classes
         public void playAgain()
         {
             Console.WriteLine("Play Again? Yes or No");
+            input = Console.ReadLine();
             if (input == "Yes")
             {
+                playersHandTotal = 0;
+                dealersTotalOfFirstDraw = 0;
                 blackJackGame();
             }
             else if (input == "No")

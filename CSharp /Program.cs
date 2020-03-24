@@ -32,10 +32,11 @@ namespace CSharp
             }
             else if (input == "Roulette")
             {
-               classes.Roulette rouletteGamePlay = new classes.Roulette();
+                classes.Roulette rouletteGamePlay = new classes.Roulette();
                 rouletteGamePlay.rouletteGameBeginning();
             }
-            else{
+            else
+            {
                 gameOptions();
             }
         }
@@ -50,6 +51,7 @@ namespace CSharp
             // classes.Roulette rouletteGamePlay = new classes.Roulette();
             // rouletteGamePlay.rouletteGameBeginning();
         }
+
     }
 }
 

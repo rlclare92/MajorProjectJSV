@@ -6,23 +6,9 @@ namespace classes
     {
         string input;
         int playerInput;
-        int userBalance;
+
         public void rouletteGameBeginning()
         {
-            Console.WriteLine("Please place your bets £");
-            input = Console.ReadLine();
-            playerInput = Convert.ToInt32(input);
-            Console.WriteLine("You have placed {0}, Dealer has placed {0}", playerInput);
-            if (playerInput > 100)
-            {
-                System.Console.WriteLine("Betting limit is upto £100, please reenter betting amount");
-                rouletteGameBeginning();
-            }
-            else
-            {
-                Console.WriteLine("You have placed {0}, Dealer has placed £{0}", playerInput);
-            }
-
             Console.WriteLine("Please select what too bet on: Colours, Odds, Numbers");
             input = Console.ReadLine();
             if (input == "Colours")
@@ -55,12 +41,14 @@ namespace classes
             if (input == colours[cIndex])
             {
                 Console.WriteLine("You win!!");
-                PlayerWinnings();
+                CSharp.Program casinoGame = new CSharp.Program();
+                casinoGame.PlayerWinnings();
             }
             else
             {
-                Console.WriteLine("You lose!!");
-                HouseWinning();
+                Console.WriteLine("You lose");
+                CSharp.Program casinoGame = new CSharp.Program();
+                casinoGame.HouseWinning();
             }
         }
         public void playerOddsThrough()
@@ -73,12 +61,14 @@ namespace classes
             if (input == odds[oIndex])
             {
                 Console.WriteLine("You win!!");
-                PlayerWinnings();
+                CSharp.Program casinoGame = new CSharp.Program();
+                casinoGame.PlayerWinnings();
             }
             else
             {
                 Console.WriteLine("You lose");
-                HouseWinning();
+                CSharp.Program casinoGame = new CSharp.Program();
+                casinoGame.HouseWinning();
             }
         }
         public void playerNumberThgrough()
@@ -90,40 +80,14 @@ namespace classes
             if (playerInput == numbers)
             {
                 Console.WriteLine("You win!!");
-                PlayerWinnings();
+                CSharp.Program casinoGame = new CSharp.Program();
+                casinoGame.PlayerWinnings();
             }
             else
             {
                 Console.WriteLine("You lose");
-                HouseWinning();
-            }
-        }
-        public void PlayerWinnings()
-        {
-            playerInput += userBalance;
-            Console.WriteLine("Player wins {0}", playerInput);
-            Console.WriteLine("PlayerWinnings updated balance {0}", userBalance);
-            playAgain();
-        }
-        public void HouseWinning()
-        {
-            playerInput -= userBalance;
-            Console.WriteLine("House wins {0}", playerInput);
-            Console.WriteLine("User balance is: {0}", userBalance);
-            playAgain();
-        }
-        public void playAgain()
-        {
-            Console.WriteLine("Play Again? Yes or No");
-            input = Console.ReadLine();
-            if (input == "Yes")
-            {
-                rouletteGameBeginning();
-            }
-            else if (input == "No")
-            {
                 CSharp.Program casinoGame = new CSharp.Program();
-                casinoGame.gameOptions();
+                casinoGame.HouseWinning();
             }
         }
     }

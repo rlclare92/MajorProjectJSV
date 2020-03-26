@@ -19,6 +19,15 @@ namespace classes
             Console.WriteLine("Please place your bets £");
             input = Console.ReadLine();
             playerInput = Convert.ToInt32(input);
+            if (playerInput > 100)
+            {
+                System.Console.WriteLine("Betting limit is upto £100, please reenter betting amount");
+                blackJackGame();
+            }
+            else
+            {
+                Console.WriteLine("You have placed {0}, Dealer has placed {0}", playerInput);
+            }
             Console.WriteLine("You have placed {0}, Dealer has placed {0}", playerInput);
             playersHand();
         }

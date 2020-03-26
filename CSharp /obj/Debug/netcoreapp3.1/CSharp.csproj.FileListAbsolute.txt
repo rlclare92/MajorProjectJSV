@@ -8,3 +8,13 @@
 /Users/codenation/Major project/CSharp /bin/Debug/netcoreapp3.1/CSharp.pdb
 /Users/codenation/Major project/CSharp /obj/Debug/netcoreapp3.1/CSharp.dll
 /Users/codenation/Major project/CSharp /obj/Debug/netcoreapp3.1/CSharp.pdb
+/Users/ruthclare/Documents/GitHub/MajorProjectJSV/CSharp /bin/Debug/netcoreapp3.1/CSharp.deps.json
+/Users/ruthclare/Documents/GitHub/MajorProjectJSV/CSharp /bin/Debug/netcoreapp3.1/CSharp.runtimeconfig.json
+/Users/ruthclare/Documents/GitHub/MajorProjectJSV/CSharp /bin/Debug/netcoreapp3.1/CSharp.runtimeconfig.dev.json
+/Users/ruthclare/Documents/GitHub/MajorProjectJSV/CSharp /bin/Debug/netcoreapp3.1/CSharp.dll
+/Users/ruthclare/Documents/GitHub/MajorProjectJSV/CSharp /bin/Debug/netcoreapp3.1/CSharp.pdb
+/Users/ruthclare/Documents/GitHub/MajorProjectJSV/CSharp /obj/Debug/netcoreapp3.1/CSharp.csprojAssemblyReference.cache
+/Users/ruthclare/Documents/GitHub/MajorProjectJSV/CSharp /obj/Debug/netcoreapp3.1/CSharp.AssemblyInfoInputs.cache
+/Users/ruthclare/Documents/GitHub/MajorProjectJSV/CSharp /obj/Debug/netcoreapp3.1/CSharp.AssemblyInfo.cs
+/Users/ruthclare/Documents/GitHub/MajorProjectJSV/CSharp /obj/Debug/netcoreapp3.1/CSharp.dll
+/Users/ruthclare/Documents/GitHub/MajorProjectJSV/CSharp /obj/Debug/netcoreapp3.1/CSharp.pdb

@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "/Users/codenation/.dotnet/store/|arch|/|tfm|",
-      "/Users/codenation/.nuget/packages"
+      "/Users/ruthclare/.dotnet/store/|arch|/|tfm|",
+      "/Users/ruthclare/.nuget/packages"
     ]
   }
 }

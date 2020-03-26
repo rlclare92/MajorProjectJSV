@@ -13,6 +13,15 @@ namespace classes
             input = Console.ReadLine();
             playerInput = Convert.ToInt32(input);
             Console.WriteLine("You have placed {0}, Dealer has placed {0}", playerInput);
+            if (playerInput > 100)
+            {
+                System.Console.WriteLine("Betting limit is upto £100, please reenter betting amount");
+                rouletteGameBeginning();
+            }
+            else
+            {
+                Console.WriteLine("You have placed {0}, Dealer has placed £{0}", playerInput);
+            }
 
             Console.WriteLine("Please select what too bet on: Colours, Odds, Numbers");
             input = Console.ReadLine();

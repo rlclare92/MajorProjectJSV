@@ -6,7 +6,6 @@ namespace CSharp
     {
         string input;
         int userBalance = 100;
-        int bettingHoldingPile;
          int playerInput;
         int playerAgeInput;
         string playerGameOptionInput = Console.ReadLine();
@@ -18,9 +17,7 @@ namespace CSharp
             playerAgeInput = Convert.ToInt32(input);
             if (playerAgeInput >= 18)
             {
-                Console.WriteLine("Welcome, please select a game from the options, BlackJack or Roulette");
                 playerInputNextRound();
-                
             }
             else
             {
@@ -29,11 +26,14 @@ namespace CSharp
         }
          public void playerInputNextRound()
          {      
+                Console.WriteLine("Press enter to make a bet");
                 string playerGameOptionInput = Console.ReadLine();
-                gameOptions(playerGameOptionInput);
+                playerBets();
          }
-        public void gameOptions(string playerGameOptionInput)
+        public void gameOptions()
         {
+            Console.WriteLine("Welcome, please select a game from the options, BlackJack or Roulette");
+            string playerGameOptionInput = Console.ReadLine();
             if (playerGameOptionInput == "BlackJack")
             {
                 classes.BlackJack blackJackGamePlay = new classes.BlackJack();
@@ -46,7 +46,7 @@ namespace CSharp
             }
             else
             {
-                gameOptions(playerGameOptionInput);
+                gameOptions();
             }
         }
         public void playerBets()
@@ -63,14 +63,13 @@ namespace CSharp
             {
                 Console.WriteLine("You have placed £{0}, Dealer has placed £{0}", playerInput);
                 // gameOptions(playerGameOptionInput);
-                playerInputNextRound();
+                gameOptions();
             }
         }
 
         public void PlayerWinnings()
         {
             playerInput += userBalance;
-            userBalance = playerInput += bettingHoldingPile;
             Console.WriteLine("Player wins £{0}", playerInput);
             Console.WriteLine("Player's updated balance: £{0}", userBalance);
             playAgain();
@@ -78,7 +77,6 @@ namespace CSharp
         public void HouseWinning()
         {
             playerInput -= userBalance;
-            userBalance = playerInput -= bettingHoldingPile;
             Console.WriteLine("House wins £{0}", playerInput);
             Console.WriteLine("Player's updated balance is: £{0}", userBalance);
             playAgain();
@@ -90,12 +88,11 @@ namespace CSharp
             input = Console.ReadLine();
             if (input == "Yes")
             {
-                playerBets();
+                playerInputNextRound();
             }
             else if (input == "No")
             {
-                CSharp.Program casinoGame = new CSharp.Program();
-                casinoGame.gameOptions(playerGameOptionInput);
+              System.Console.WriteLine("Thanks for playing!!");
             }
         }
 
